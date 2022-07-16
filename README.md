@@ -1,4 +1,4 @@
-![Logo](/frontend/public/bodg.png)
+![Logo](/frontend/src/assets/images/logo-readme.png)
 
 
 # Bodegadmin
