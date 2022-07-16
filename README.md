@@ -1,4 +1,4 @@
-![Logo](https://scontent.flsc3-1.fna.fbcdn.net/v/t39.30808-6/293569862_10229245447138706_7573214838893657443_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=HMTCV6kXzXgAX92nZdD&_nc_ht=scontent.flsc3-1.fna&oh=00_AT96gZhaCm-mAYSSZg9E5TzQPEq44xDXD42e7fgrSViq7w&oe=62D50D5A)
+![Logo](/frontend/src/assets/images/logo-readme.png)
 
 
 # Bodegadmin
