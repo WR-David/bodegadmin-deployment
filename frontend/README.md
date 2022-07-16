@@ -3,7 +3,7 @@
 
 **assets:** Contiene los recursos a utilizar (imagenes, svg, global css).
 
-**components:** Contiene los componentes de los form.
+**components:** Contiene los componentes globales.
 
 **data:** Contiene los JSON y constantes.
 
