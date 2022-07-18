@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Login from './components/Login/Login'
-// import NavBarCompleto from './components/Navbar/NavBarCompleto'
+import Rutas from './components/Navbar/Router'
 
 export default function App() {
 	const [connected, setConnected] = useState(false)
 
 	return (
-		connected ? <div>Hola, si funciono</div> : <Login setCon={setConnected} />
+		connected ? <Rutas /> : <Login setCon={setConnected} />
 		)
 }

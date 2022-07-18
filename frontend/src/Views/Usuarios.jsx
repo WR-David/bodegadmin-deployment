@@ -1,11 +1,12 @@
 import React from 'react'
-import DataTableUsuarios from '../components/DataTables/DataTableUsuarios'
-import patronFondo2 from '../assets/img/patronFondo2.png'
+import patronFondo2 from '../assets/Img/patronFondo2.png'
+import DataUsers from '../components/Data/DataUsers'
 
 function Usuarios() {
+
 	return (
 		<div style={{ justifyContent:'center',display:'flex', backgroundImage:`url(${patronFondo2})`,width:'100%', height:'1000px'}}>
-			<DataTableUsuarios></DataTableUsuarios>		
+			<DataUsers/>
 		</div>
 	)
 }

@@ -1,7 +1,8 @@
 import React from 'react'
 import './Styles/InputStyle.css'
-import logoOficial from '../../assets/logoOficial.png'
-import fondoLogin3 from '../../assets/fondoLogin3.png'
+import logoOficial from '../../assets/Img/logoOficial.png'
+import fondoLogin3 from '../../assets/Img/fondoLogin3.png'
+import axios from 'axios'
 
 function Formulario({ dato, setDatos, login }) {
 
@@ -12,15 +13,7 @@ function Formulario({ dato, setDatos, login }) {
     }
 
     const call = () => {
-        const reqInit = {
-            method: 'POST',
-            headers: { 'Content-Type': 'aplication/json' },
-            body: JSON.stringify(dato)
-        }
-
-        fetch('http://localhost:4000', reqInit)
-            .then(res => res.json())
-            .then(res => login(res))
+       login(true)
     }
 
     return (

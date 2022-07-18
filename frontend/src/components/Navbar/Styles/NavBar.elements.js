@@ -1,17 +1,15 @@
 import styled from 'styled-components'
 
-
 export const Container = styled.div`
   width: 100%;
   height: 70px;
   background-color: #F8ECD1; ;
 `
 
-
 export const Wrapper = styled.div`
   width: 100%;
   max-width: 1300px;
-  height: 100%;
+  height: 120%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -19,10 +17,10 @@ export const Wrapper = styled.div`
 `
 
 export const LogoContainer = styled.div`
-  margin-left: 15rem;
+  margin-left: 1rem;
   display: flex;
-  align-items: center;
-  width: 4%;
+  flex-wrap: wrap;
+  width: 30%;
 `
 
 export const Menu = styled.ul `
@@ -91,8 +89,6 @@ export const MenuItemLogout =  styled.li `
   }
 `
 
-
-
 export const MenuItemLink = styled.a `
   display: flex;
   justify-content: center;
@@ -105,8 +101,6 @@ export const MenuItemLink = styled.a `
   font-weight: 300;
   cursor: pointer;
   transition: 0.5s all ease;
-
-
 
   div{
 	  margin-left:15px;
