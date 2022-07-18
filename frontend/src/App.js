@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
-import Login from './pages/Login/Login'
-import Home from './pages/Home/Home'
+import Login from './components/Login/Login'
+import Rutas from './components/Navbar/Router'
 
 export default function App() {
 	const [connected, setConnected] = useState(false)
 
-	const login = (state) => {
-		setConnected(state)
-	}
-
 	return (
-		connected ? <Home /> : <Login login={login} />
-	)
+		connected ? <Rutas /> : <Login setCon={setConnected} />
+		)
 }
