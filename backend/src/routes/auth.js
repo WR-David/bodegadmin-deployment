@@ -26,7 +26,11 @@ router.post('/login', (req, res, next) => {
 })
 
 router.get('/profile', isLoggedIn, (req, res) => {
-	res.render('profile')
+	res.send(req.isAuthenticated())
+})
+
+router.post('/', (req, res) => {
+	res.send(state=true)
 })
 
 router.get('/logout', (req, res, next) => {

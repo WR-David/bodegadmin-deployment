@@ -5,7 +5,7 @@ const path = require('path')
 const flash = require('connect-flash')
 const session = require('express-session')
 const passport = require('passport')
-
+const cors = require("cors");
 //inicializaciones
 //Se crea una instancia de express
 const app = express()
@@ -38,7 +38,7 @@ app.engine('.hbs', engine({
 	defaultLayout: 'main',
 	layoutDir: path.join(app.get('views'), 'layouts'),
 	partialsDir: path.join(app.get('views'), 'partials'),
-	extname: '.hbs',
+	extname: '.hbs', 
 	helpers: require('./lib/handlebars')
 }))
 app.set('view engine', '.hbs')
@@ -65,6 +65,7 @@ app.use((req, res, next) => {
 	next()
 })
 
+app.use(cors());
 
 //routes
 app.use(require('./routes'))

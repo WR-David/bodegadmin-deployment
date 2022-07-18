@@ -24,9 +24,8 @@ router.post('/add', async (req, res) => {
 	res.redirect('/users')
 })
 
-router.get('/', isLoggedIn, async (req, res) => {
-
-	const users = await db.query('SELECT * FROM usuario WHERE estado = 1')
+router.get('/', async (req, res) => {
+	const users = await db.query('SELECT * FROM usuario WHERE estado = 0')
 	res.render('users/list', { users })
 })
 

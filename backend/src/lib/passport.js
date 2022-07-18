@@ -30,17 +30,18 @@ passport.use('local.login', new LocalStrategy({
 	passwordField: 'pass',
 	passReqToCallback: true
 }, async (req, rut, pass, done) => {
-	const rows = await db.query('SELECT * FROM usuario WHERE rut = ?', [rut])
+	const rows = await db.query('SELECT * FROM usuario WHERE rut = ? AND estado = 1', [rut])
 	if (Object.keys(rows).length > 0) {
 		const user = rows[0]
 		const validPass = await helpers.matchPassword(pass, user.pass)
 		if (validPass) {
-			done(null, user, req.flash('success', 'Bienvenido' + user.nombre))
+			done(null, user, req.flash('success', 'Bienvenido'+ user.nombre))
 		} else {
-			done(null, false, req.flash('message', 'Contraseña incorrecta'))
+			done(null, user, req.flash('message', 'Contraseña incorrecta'))
 		}
 	} else {
 		return done(null, false, req.flash('message', 'El usuario no existe'))
+		
 	}
 }))
 
