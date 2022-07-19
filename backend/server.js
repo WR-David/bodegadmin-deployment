@@ -8,10 +8,10 @@ app.set('port', process.env.PORT || 9000)
 
 //middlewares-------
 const dboptions = {
-    host: '190.107.177.33',
-    user: 'cbo82504_testing',
-    password: 'Asthurion69',
-    database: 'cbo82504_bodegadmin_test'
+    host: 'localhost',
+    user: '',
+    password: '',
+    database: ''
 }
 
 app.use(myconn(mysql, dboptions, 'single'))
