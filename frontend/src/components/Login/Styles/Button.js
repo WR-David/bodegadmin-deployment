@@ -1,6 +1,19 @@
 import styled from 'styled-components'
+import React from 'react'
 
-export const Button = styled.button `
+export default function Button({login}) {
+	const call = () => {
+		login(true)
+	}
+
+  	return (
+		<Buttonasd onClick={call}> Holi </Buttonasd>
+  	)	
+}
+
+
+	
+export const Buttonasd = styled.button `
     background-color: #7B6F93;
     border: none;
     width: 62%;
@@ -13,6 +26,8 @@ export const Button = styled.button `
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     color: #FFFFFF;
+	// hacer animacion 3d al hacer click
+
     &:hover {
         background-color: #7FFFD4;
         transition: 0.6s;
